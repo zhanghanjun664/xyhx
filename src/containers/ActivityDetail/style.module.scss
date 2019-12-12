@@ -1,0 +1,42 @@
+.wrapper {
+  padding-bottom: 250px;
+  .checkBox {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color: #000000, $alpha: 0.6);
+    .box {
+      max-height: 60vh;
+      overflow: auto;
+      min-width: 70vw;
+      margin-top: -200px;
+      border-radius: 8px;
+      background: #ffffff;
+      .storeItem {
+        min-width: 70vw;
+        padding: 20px 40px;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.12);
+      }
+    }
+  }
+
+  .signUp {
+    background: #ffffff;
+    position: fixed;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    padding: 0 150px;
+    box-sizing: border-box;
+  }
+}

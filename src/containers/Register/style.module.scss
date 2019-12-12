@@ -1,0 +1,56 @@
+.wrapper {
+  min-height: 100vh;
+  .block {
+    margin: 50px 0;
+    padding: 0 50px;
+  }
+  .picker {
+    padding: 24px 0;
+    border-bottom: 1px solid #d6e4ef;
+  }
+  .text {
+    padding: 24px 0;
+  }
+  .imgList {
+    margin: 0 30px;
+    display: flex;
+    .item {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+      background: rgba(0, 0, 0, 0.05);
+      background-size: cover;
+      position: relative;
+      .delete {
+        position: absolute;
+        z-index: 2;
+        right: -30px;
+        top: -30px;
+        font-size: 26px;
+        padding: 10px 20px;
+        color: #ffffff;
+        background: red;
+        border-radius: 50px;
+      }
+      .img {
+        max-height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .location {
+    margin-top: 25px;
+    .descTitle {
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+}
+
+.subButton {
+  margin-top: 150px;
+  padding: 0 100px;
+}

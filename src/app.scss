@@ -1,0 +1,14 @@
+$color-brand: red;
+@import "~taro-ui/dist/style/index.scss";
+
+.at-list__item-content {
+  overflow: unset;
+}
+
+.h3 {
+  padding: 24px 0;
+  font-size: 32px;
+  line-height: 48px;
+  margin: 0 30px;
+  color: #333;
+}

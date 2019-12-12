@@ -1,0 +1,77 @@
+.wrapper {
+  height: 80vh;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .title {
+    font-size: 42px;
+    line-height: 60px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  .content {
+    width: 100%;
+    .block {
+      height: 50px;
+    }
+  }
+}
+
+.cont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #ffffff;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 320px;
+  }
+}
+
+.twill {
+  width: 20px;
+  height: 2000px;
+  background: red;
+  transform: rotateZ(30deg);
+  transform-origin: top left;
+  box-shadow: 40px 0px 0px 0px red, 80px 0px 0px 0px red, 120px 0px 0px 0px red,
+    160px 0px 0px 0px red, 200px 0px 0px 0px red, 240px 0px 0px 0px red,
+    280px 0px 0px 0px red, 320px 0px 0px 0px red, 360px 0px 0px 0px red,
+    400px 0px 0px 0px red, 440px 0px 0px 0px red, 480px 0px 0px 0px red,
+    520px 0px 0px 0px red, 560px 0px 0px 0px red, 600px 0px 0px 0px red,
+    640px 0px 0px 0px red, 680px 0px 0px 0px red, 720px 0px 0px 0px red,
+    760px 0px 0px 0px red, 800px 0px 0px 0px red, 840px 0px 0px 0px red,
+    880px 0px 0px 0px red, 920px 0px 0px 0px red, 960px 0px 0px 0px red,
+    1000px 0px 0px 0px red, 1040px 0px 0px 0px red, 1080px 0px 0px 0px red,
+    1120px 0px 0px 0px red, 1160px 0px 0px 0px red, 1200px 0px 0px 0px red,
+    1240px 0px 0px 0px red, 1280px 0px 0px 0px red, 1300px 0px 0px 0px red,
+    1380px 0px 0px 0px red, 1420px 0px 0px 0px red, 1460px 0px 0px 0px red,
+    1500px 0px 0px 0px red, 1540px 0px 0px 0px red, 1580px 0px 0px 0px red,
+    1620px 0px 0px 0px red;
+  // animation: move 5s linear infinite;
+}
+
+.logo {
+  font-size: 48px;
+  position: absolute;
+  z-index: 9;
+  color: #ffffff;
+  background: red;
+  font-weight: bold;
+  padding: 0 10px;
+}
