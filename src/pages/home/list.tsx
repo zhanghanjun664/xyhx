@@ -35,8 +35,10 @@ export default function List(props) {
 
   // 打开详情
   const openDetali = item => {
+    let url = `/containers/ActivityDetail/index?activitysId=${item.activitysId}`
+
     Taro.navigateTo({
-      url: `/containers/ActivityDetail/index?activitysId=${item.activitysId}`
+      url
     });
   };
 

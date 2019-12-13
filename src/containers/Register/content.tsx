@@ -2,7 +2,7 @@ import { useState } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { AtInput, AtButton } from "taro-ui";
 import { getRegisterCode, subRegister, checkValidCode, checkname } from "../../dataFactory";
-import { uploadFileArray } from "../../utils";
+import { uploadFileArray, uploadFiles } from "../../utils";
 import style from "./style.module.scss";
 
 export default function Content(props) {
@@ -30,7 +30,7 @@ export default function Content(props) {
     const newData = data;
     return new Promise(resolve => {
       newData.shopList.map(async (itme, index) => {
-        await uploadFileArray(itme.imgList)
+        await uploadFiles(itme.imgList)
           // 上传成功
           .then(list => {
             newData.shopList[index].imgList = list;

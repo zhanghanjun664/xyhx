@@ -16,7 +16,6 @@ export default function Store(props) {
       sizeType: ["original", "compressed"],
       sourceType: ["album", "camera"],
       success: res => {
-        console.log(res.tempFilePaths[0])
         update({ type: "addImgList", value: res.tempFilePaths[0], index });
       }
     });

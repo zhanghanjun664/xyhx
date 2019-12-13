@@ -80,6 +80,14 @@ export const updateInfo = data => {
   });
 };
 
+// 更新负责人信息
+export const modifuserhead = data => {
+  return request("user/modifuserhead", {
+    ...postFormData,
+    data
+  });
+};
+
 /**
  * 获取用户信息
  */

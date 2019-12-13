@@ -2,14 +2,14 @@ import Taro, { useState, useEffect } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { useStore, userInfo, updateUserInfo } from "../../store";
 import { AtTabs, AtTabsPane, AtInput } from "taro-ui";
-import { getAgentList, updateInfo, getAccountInfo } from "../../dataFactory";
+import { getAgentList, updateInfo, getAccountInfo, modifuserhead } from "../../dataFactory";
 import style from "./style.module.scss";
 import Content from "./content";
 
 export default function Index() {
   const userData = useStore(userInfo);
   console.log("user=>", userData)
-  const { shopList = [], headPerson, isSupplement } = userData;
+  const { shopList = [], headPerson, userId } = userData;
   const [name, setName] = useState(headPerson);
   const [current, setCurrent] = useState(0);
   const [storesList, setStoresList] = useState();
@@ -49,9 +49,12 @@ export default function Index() {
   };
 
   const saveUserInfo = async () => {
-    const res: any = await updateInfo({ type: "updateUser", name });
-    Taro.showToast({ title: "保存成功" });
-    updateUserInfo(res.data);
+    const res: any = await modifuserhead({ userid: userId, headPerson: name });
+    if(res && res.code == "10000"){
+      Taro.showToast({ title: "保存成功" });
+    }
+    const { data }: any = await getAccountInfo();
+    updateUserInfo(data);
   };
 
   const tabList: any = [];

@@ -9,6 +9,11 @@ export default function Drawer(props) {
   const userDate = useStore(userInfo);
   const { showDrawer, setShowDrawer, openChange } = props;
 
+  let count = 0;
+  if(userDate.shopList && userDate.shopList.length>0){
+    count = userDate.shopList.length
+  }
+
   return (
     <AtDrawer show={showDrawer} mask onClose={() => setShowDrawer(false)}>
       <View className={style.topBox}>
@@ -17,8 +22,8 @@ export default function Drawer(props) {
         </View>
         <View className="at-article__h1">小野活动报销</View>
         {/* <View className="at-article__h3">{userDate.storeName}</View> */}
-        <View className="at-article__h3">{userDate.name}</View>
-        <View className="at-article__h3">{userDate.stores.length} 家门店</View>
+        <View className="at-article__h3">{userDate.headPerson}</View>
+        <View className="at-article__h3">{count} 家门店</View>
         <View className="at-article__h3">{userDate.mobilePhoneNumber}</View>
         {/* {userDate.city && (
           <View className="at-article__h3">{userDate.city.join("-")}</View>
